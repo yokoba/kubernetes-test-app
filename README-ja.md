@@ -4,30 +4,33 @@
   <img src="https://img.shields.io/badge/-Docker-1488C6.svg?logo=docker&style=plastic">
 </p>
 
-# Project Overview
 
-Manifest file for Kubernetes and application program created for studying Kubernetes operation.
+# 概要
 
-## Environment
+Kubernetesの動作を勉強するために作成したKubernetes用のmanifestファイルと、利用するために作ったアプリケーションのプログラム
 
-The project should work in an environment where Kubernetes is operational.
+
+## 実行環境
+
+Kubernetesが動作する環境であれば問題はないと思います。
 
 - Ubuntu 22.04.3 LTS (Jammy Jellyfish)
 - minikube version: v1.32.0
 
-# Installation Steps
 
-To run the project, install Minikube.
-For detailed instructions, refer to the following link.
+## プロジェクトを実行するために必要な依存関係やライブラリのインストール手順を提供します。
 
 - Kubernetes道場 2日目 - Kubernetesのローカル環境について  
   [https://cstoku.dev/posts/2018/k8sdojo-02/](https://cstoku.dev/posts/2018/k8sdojo-02/)
 
-## Usage
+Minikubeをインストール
 
-You can test the operation using the files under the `kuber_manifest` directory.
 
-### Execution
+## プロジェクトの基本的な使い方について説明します。具体的なコマンドや操作手順が含まれます。
+
+kuber_manifestの配下にあるファイルを使って動作のテストができる。
+
+### 実行方法
 
 ```
 $ minikube start --cpus 4 --memory 4096
@@ -37,7 +40,7 @@ $ kubectl apply -f service.yaml
 $ kubectl apply -f test.yaml
 ```
 
-### Operation check
+### 動作確認
 
 ```
 $ kubectl get all
@@ -87,7 +90,8 @@ written to stdout
 $
 ```
 
-### Directory Structure
+
+### ディレクトリ構造:
 
 ```
 .
@@ -102,15 +106,15 @@ $
 └── ReamdMe.txt
 ```
 
-## Project Structure
+## プロジェクト内の主要なディレクトリやファイルの説明を提供します。
 
 - flask_app
-  - Files for building the Docker container used in `development.yaml`.
+  - deployment.yamlの中で利用するdocker containerをビルドする為のファイル群
 - kuber_manifest
-  - Files used for developing with `kubectl`
+  - kuberctlを使ってデプロイするために利用するファイル群
 
 
-## License
+## ライセンス
 
 MIT License
 
